@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>codechef</title>
+   <style>
+      .heading {
+         border-bottom: 1px solid black;
+         background-color: rgb(255, 251, 251);
+         height: 90px;
+         margin-top: 0px;
+         width: 100%;
+      }
+
+      .logo {
+         /* border: 1px solid red; */
+         width: 190px;
+         margin-top: 6px;
+         margin-left: 65px;
+         position: absolute;
+         display: inline-block;
+      }
+
+      .middlemenu {
+         display: flex;
+         flex-wrap: wrap;
+         position: absolute;
+         /* border: 1px solid rgb(15, 0, 128); */
+         height: 50px;
+         display: block;
+         width: 69%;
+         left: 200px;
+         top: 30px;
+      }
+
+      .menu {
+
+
+         display: flex;
+         flex-wrap: wrap;
+         flex-shrink: 1;
+         flex-direction: row;
+         position: absolute;
+         margin-top: 8px;
+         /* border: 1px solid rgb(226, 34, 34); */
+         width: 650px;
+         left: 250px;
+         height: 35px;
+         align-items: center;
+         margin: 8px 60px;
+         justify-content: space-evenly;
+      }
+
+      .middlemenu li {
+         display: flex;
+         flex-shrink: 1;
+         font-size: 20px;
+
+         position: relative;
+         display: inline-block;
+
+         margin: 10px;
+         /* border: 1px solid red; */
+         width: 90px;
+         padding: 10px 10px;
+         margin: 0px 0px;
+         text-align: center;
+         border-radius: 2px;
+
+      }
+
+      #menu5 {
+         font-size: larger;
+         width: 140px;
+         margin: 10px;
+      }
+
+      .middlemenu li a {
+
+         text-decoration: none;
+      }
+
+      .middlemenu li:hover {
+         font-weight: bold;
+         background-color: beige;
+      }
+
+      .photo img {
+         position: absolute;
+         right: 100px;
+         top: 28px;
+         display: block;
+         width: 50px;
+         border-radius: 40px;
+      }
+
+      .arrow img {
+         width: 10px;
+         position: absolute;
+         right: 80px;
+         top: 50px;
+      }
+
+      /* middle css */
+      .container {
+
+         height: 250px;
+         box-sizing: border-box;
+         display: flex;
+         flex-shrink: 1;
+      }
+
+      .icontainer {
+         display: flex;
+         margin-top: 20px;
+         margin-left: 10px;
+         /* flex-wrap: wrap; */
+         flex-shrink: 1;
+         
+         width: 76%;
+         height: 270px;
+         justify-content: space-around;
+
+      }
+
+      .box {
+
+         display: inline-block;
+         border: 1px solid black;
+         width: 200px;
+         height: 250px;
+         box-sizing: border-box;
+         /* margin-top: 25px; */
+      }
+
+      #box4 {
+         display: flex;
+         flex-shrink: 1;
+         
+         position: absolute;
+         right: 60px;
+         top: 130px;
+         width: 274px;
+         height: 90px;
+         ;
+         border-radius: 10px;
+      }
+
+      #box5 {
+         display: flex;
+         flex-shrink: 1;
+        
+         position: absolute;
+         right: 60px;
+         top: 242px;
+         width: 274px;
+         height: 90px;
+         border-radius: 10px;
+      }
+
+      #box1,
+      #box2,
+      #box3 {
+         flex-shrink: 1;
+         border-radius: 8px;
+         width: 330px;
+         height: 206px;
+         margin-top: 10px;
+      }
+
+      #box1 {
+         background-color: aliceblue;
+
+      }
+
+      #box1 p {
+         position: relative;
+         font-size: 20px;
+         left: 10px;
+
+         /* padding: 15px; */
+
+
+      }
+
+      #box1 ul {
+         /* padding: 20px; */
+         display: inline-block;
+
+         width: 70%;
+         /* margin: 10px; */
+      }
+
+      #box1 a {
+
+         text-decoration: none;
+         position: relative;
+
+         bottom: 30px;
+         left: 30px;
+      }
+
+      #box1 a:hover {
+         text-decoration: underline;
+         color: blue;
+         font-weight: bold;
+      }
+
+      .info {
+         position: relative;
+         left: 20px;
+         /* margin: 10px; */
+      }
+
+      /*  box 2 css */
+      #box2 {
+         background-color: rgba(20, 62, 233, 0.817);
+         color: white;
+         font-size: larger;
+         text-align: center;
+      }
+
+      #box2 a {
+
+         text-decoration: none;
+
+         color: rgb(225, 221, 235);
+      }
+
+      #box3 p {
+
+         font-size: 27px;
+         margin-left: 50px;
+         font-weight: 600;
+      }
+
+      #box3 {
+         color: white;
+         background-color: rgb(88, 71, 222);
+      }
+
+      #box3 div {
+
+         padding: 10px;
+      }
+
+      #box3 a {
+         
+         text-decoration: none;
+         color: white;
+         font-size: 20px;
+         position: relative;
+         margin: 30px 40px;
+         top: 30px;
+         left: 70px;
+      }
+
+      /* box 4 css */
+      #box4 {
+         color: white;
+         background-color: rgba(20, 62, 233, 0.817);
+         
+      }
+
+      #box4 p {
+         margin-top: 0px;
+         margin-left: 20px;
+         padding: 10px 10px;
+         font-size: large;
+         text-align: center;
+      }
+
+      /* box 5 css */
+      #box5 {
+         text-align: center;
+         color: white;
+         background-color: rgba(73, 37, 235, 0.817);
+      }
+
+      #box5 p {
+
+         margin-top: 0px;
+         margin-left:50px;
+         padding: 10px 10px;
+         font-size: 20px;
+         text-align: center;
+      }
+
+      /* next menu */
+      .head {
+         border-bottom: 1px solid black;
+         height: 100px;
+         width: 100%;
+         box-sizing: border-box;
+
+
+
+      }
+
+      #all {
+
+
+
+         height: 50px;
+         position: absolute;
+         width: 270px;
+         right: 250px;
+         left: 33px;
+         top: 410px;
+         background-color: rgba(215, 223, 249, 0.475);
+         text-align: center;
+         font-size: larger;
+         border-radius: 10px;
+         color: rgb(14, 43, 232);
+
+      }
+
+      #all p {
+         margin-top: 15px;
+      }
+
+      #recent {
+         position: absolute;
+         width: 300px;
+
+         top: 410px;
+         height: 50px;
+         width: 200px;
+         right: 940px;
+         text-align: center;
+      }
+
+      #todo {
+         width: 100px;
+
+         position: absolute;
+         right: 790px;
+         top: 410px;
+         height: 50px;
+
+      }
+
+      #recent a {
+         text-decoration: none;
+         font-size: larger;
+         color: black;
+         margin-top: 15px;
+      }
+
+      #todo p {
+         padding: 2px;
+         margin-top: 15px;
+      }
+
+      #todo p a {
+         text-decoration: none;
+         font-size: larger;
+         color: black;
+      }
+
+
+      /* lower box css  */
+      .lcontainer {
+         border: 1px solid rgb(232, 47, 47);
+         /* border-top: 0px solid rgb(233, 17, 17); */
+         height: 1300px;
+         width: 100%;
+         display: flex;
+         box-sizing: border-box;
+      }
+
+      .leftbox {
+         display: inline-block;
+
+
+         border: 1px solid rgb(0, 0, 0);
+         height: 1300px;
+
+         width: 400px;
+      }
+
+      .search {
+
+         height: 56px;
+         width: 360px;
+         margin-top: 60px;
+
+         margin-left: 14px;
+         border: 1px solid white;
+         border-right: 2px solid blue;
+         border-bottom: 0.1px solid gray;
+
+         text-align: center;
+         font-size: larger;
+      }
+
+      .search:hover {
+         background-color: rgba(215, 223, 249, 0.475);
+      }
+
+      .leftbox p {
+
+         margin: 30px;
+         font-size: 25px;
+         margin-left: 20px;
+         padding: 2px 19px;
+
+         height: 28px;
+         color: rgb(0, 0, 0);
+      }
+
+      .rightbox {
+         display: inline-block;
+         
+         width: 1100px;
+         height: 1300px;
+      }
+
+      .but1 {
+         position: relative;
+         bottom: 10px;
+
+         font-size: 18px;
+         /* margin: 10px; */
+         margin-left: 65px;
+         border: 0px;
+         height: 30px;
+         background-color: white;
+      }
+
+      .but1:hover,
+      .but2:hover {
+         text-decoration: underline;
+         cursor: pointer;
+         background-color: rgba(128, 128, 128, 0.069);
+      }
+
+      .but2 {
+         position: relative;
+         bottom: 10px;
+         font-size: 18px;
+         border: 0px;
+         background-color: white;
+         height: 30px;
+      }
+
+      .level {
+         position: relative;
+         bottom: 20px;
+
+         font-size: 20px;
+      }
+
+      .leftbox select {
+         position: relative;
+         bottom: 20px;
+         border: 1px solid rgb(0, 0, 0);
+         height: 25px;
+         border-radius: 5px;
+      }
+
+      .diff {
+         margin-top: 30px;
+         color: rgb(104, 104, 200);
+         text-decoration: none;
+         font-size: medium;
+         font-size: large;
+      }
+
+      .hr {
+         position: relative;
+         top: 20px;
+      }
+
+      #pop {
+
+         position: relative;
+         right: 25px;
+      }
+
+      .clr {
+         font-size: large;
+         text-decoration: none;
+         position: relative;
+         left: 300px;
+      }
+
+      .inputs {
+         text-align: left;
+         margin-top: 20px;
+
+         height: 700px;
+      }
+
+      .ch1 {
+         margin: 5px;
+
+         font-size: 20px;
+         display: inline;
+      }
+
+      /*  rightbox css */
+      .ptitle {
+         font-size: 30px;
+
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         color: #4a4747;
+
+         width: 600px;
+         margin-left: 50px;
+         margin-top: 40px;
+         padding: 10px;
+
+
+      }
+
+      .difficulty {
+         font-size: large;
+        
+         padding: 15px;
+         margin-left: 50px;
+      }
+
+      .diff1 {
+         font-size: larger;
+
+         font-weight: lighter;
+         margin: 10px;
+         padding: 5px;
+      }
+
+      .diff2 {
+         /* border: 1px solid green; */
+         margin: 10px;
+         padding: 5px;
+         color: #2967b1;
+         border: 1px solid rgba(42, 103, 177, .25);
+         background-color: #F5FAFE;
+         border-radius: 20px;
+      }
+
+      .tabletitle {
+
+         display: flex;
+         height: 50px;
+         width: 510px;
+         margin-left: 50px;
+         justify-content: space-around;
+      }
+
+      .tit {
+         text-decoration: none;
+         color: #4a4747;
+         font-size: large;
+         font-weight: 600px;
+         border: 1px solid gray;
+         width: 33%;
+         background-color: #F5FAFE;
+         ;
+         text-align: center;
+         padding-top: 12px;
+      }
+      .table{
+         
+         width: 95%;
+         color: white;
+         margin-top: 0px;
+         height: 90px;
+         background-color:#6C7993;
+         margin-left: 50px;
+      }
+      /* tablehead{
+         border: 2px solid rgb(255, 94, 0);
+         width: 95%;
+         color: white;
+         margin-top: 0px;
+         height: 90px;
+          background-color:#6C7993;
+         margin-left: 50px;
+      } */
+     
+   </style>
+</head>
+
+<body>
+   <div class="heading">
+      <div class="logo">
+         <img src="cc-logo.svg" alt="">
+      </div>
+      <div class="middlemenu">
+         <ul class="menu">
+            <li id="menu1"> <a href="#">Learn</a> </li>
+            <li id="menu2"> <a href="#">Practice</a> </li>
+            <li id="menu3"> <a href="#">Compete</a> </li>
+            <li id="menu4"> <a href="#">Discuss</a> </li>
+            <li id="menu5"> <a href="#">Upgrade To Pro</a> </li>
+         </ul>
+      </div>
+      <div class="photo">
+         <img src="myprofile.png" alt="">
+      </div>
+      <div class="arrow">
+         <img src="arrow.png" alt="">
+      </div>
+   </div>
+
+   <!-- container middle part -->
+   <div class="container">
+      <div class="icontainer">
+         <div class="box" id="box1">
+            <p><b>Your Performance</b></p>
+
+            <ul>
+               <li>Solved : 230</li>
+               <li>Attempted : 300</li>
+               <li>Un-Attempted : 200</li>
+            </ul>
+
+
+            <div class="info">
+               Your topic score : 80
+
+
+            </div><br><br>
+            <a href="#">View all</a>
+         </div>
+         <div class="box" id="box2">
+            <br>
+            2* To 3 *
+            <br><br>
+            Level Up To 4 *
+            <br><br>
+            <a href="#">Start Solving</a>
+         </div>
+         <div class="box" id="box3">
+            <p>Learning Paths</p>
+            <div>
+               Structured,topic-wise focus on learning with
+               <br> hand-picked problems
+            </div>
+            <a href="#">View</a>
+         </div>
+      </div>
+
+      <div class="box" id="box4">
+         <p> <b> 1v1 Games</b> <br><br>
+            Play challanges and Puzzles</p>
+      </div>
+      <div class="box" id="box5">
+         <p>Upcoming Contest <br>
+            <br>
+            Starter 78
+         </p>
+      </div>
+   </div>
+   <hr>
+   <!-- next menu -->
+   <div class="head">
+      <div id="all">
+
+         <p>All Practice Problems</p>
+      </div>
+      <div id="recent">
+         <p><a href="#">Recent Contest Problem</a></p>
+
+      </div>
+      <div id="todo">
+         <p> <a href="#">My To Do</a> </p>
+      </div>
+
+   </div>
+
+   <!-- next search problems -->
+   <div class="lcontainer">
+      <div class="leftbox">
+         <input type="#" placeholder="Search Problems" class="search">
+         <p> Problem Difficulty Rating ?</p>
+         <button class="but1">Recommended</button>
+         <button class="but2">Custom</button>
+         <p id="midleft">
+            <label class="level" for="level">Level:</label>
+            <select name="mylevel" id="level">
+               <option value="0-1000 Beginner Level" selected>0-1000 Beginner Level</option>
+               <option value="1000-1200 " selected>1000-1200 1* Beginer Level</option>
+               <option value="1200-1400 " selected>0-1000 1 * Advanced Level</option>
+
+            </select>
+            <br>
+            <a href="#" class="diff">About Difficulty Rating</a>
+            <br>
+            <hr class="hr">
+         <p class="topic">Topics</p>
+         <button class="but1" id="pop">Popular Topics</button>
+         <button class="but2">Tags</button>
+         <br>
+         <a href="#" class="clr">Clear</a>
+
+         <div class="inputs">
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Basic
+                  Programming</label></p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Arrays</label>
+            </p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Strings</label>
+            </p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Math</label></p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Sorting</label>
+            </p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Binary
+                  Search</label></p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Data
+                  Structures</label></p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Greedy
+                  Algorithms</label></p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Dynamic
+                  Programming</label></p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Graphs</label>
+            </p>
+            <p><input type="radio" name="myname" class="ch1" value="html"><label for="ch1" class="ch1">Segment
+                  Trees</label></p>
+
+
+         </div>
+
+
+
+      </div>
+      <div class="rightbox">
+         <p class="ptitle">Problems</p>
+         <p class="difficulty">
+            <span class="diff1">Difficulty:</span>
+            <span class="diff2">0-1000:1* Advanced Level X</span>
+         </p>
+         <div class="tabletitle">
+            <a href="#" class="tit">Un-Attempted</a><a href="#" class="tit">Attempted</a><a href="#" class="tit">All</a>
+         </div>
+         <table class="table">
+            <thead class="tablehead">
+               <th>Status</th>
+               <th>Code</th>
+               <th>Name</th>
+               <th>Submission</th>
+               <th>Difficulty</th>
+               <th>Contest Code</th>
+            </thead>
+            <!-- <tbody>
+              <tr class="row1" >
+                <td>----</td>
+                 <td>Andsub</td>
+                 <td>Longest And Subarray</td>
+                 <td>18161</td>
+                 <td>1502</td>
+                 <td>OCT21</td>
+              </tr>
+              <tr class="row2">
+                <td  >----</td>
+                 <td>Andsub</td>
+                 <td>Longest And Subarray</td>
+                 <td>18161</td>
+                 <td>1502</td>
+                 <td>OCT21</td>
+              </tr>
+              <tr class="row3">
+                <td  >----</td>
+                 <td>Andsub</td>
+                 <td>Longest And Subarray</td>
+                 <td>18161</td>
+                 <td>1502</td>
+                 <td>OCT21</td>
+              </tr>
+            </tbody> -->
+         </table>
+      </div>
+   </div>
+</body>
+
+</html>
